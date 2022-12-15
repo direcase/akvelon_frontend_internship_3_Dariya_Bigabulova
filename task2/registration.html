@@ -70,13 +70,14 @@
             const name = document.getElementById("name").value;
             const email = document.getElementById("email").value;
             const pass = document.getElementById("password").value;
-            if(!name.match(/^[a-zA-Z\s]{1,120}$/)){
-                document.querySelector("#matchName").style.display = "block";
-            }else document.querySelector("#matchName").style.display = "none";
+            
             if(name.length === 0){
                 document.querySelector("#errorName").style.display = "block";
             }else{
                 document.querySelector("#errorName").style.display = "none";
+                if(!name.match(/^[a-zA-Z\s]{1,120}$/)){
+                    document.querySelector("#matchName").style.display = "block";
+                }else document.querySelector("#matchName").style.display = "none";
             }
             
             if(email.length === 0){
